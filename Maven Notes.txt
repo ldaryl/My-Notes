@@ -1,0 +1,103 @@
+http://www.tutorialspoint.com/maven/maven_overview.htm
+
+An example, assuming, ${basedir} denotes the project location,
+Item								Default
+source code					${basedir}/src/main/java
+resources						${basedir}/src/main/resources
+Tests								${basedir}/src/test
+distributable JAR		${basedir}/target
+Complied byte code	${basedir}/target/classes
+
+
+Setup JAVA
+- Install JAVA and setup JAVA_HOME environment variable
+- Append Java compiler location to System Path
+
+Setup Maven
+- Add the following environment variables
+	- M2_HOME <-- where Maven root directory is
+	- M2=$M2_HOME/bin or %M2_HOME%\bin
+	- MAVEN_OPTS=-Xms256m -Xmx512m
+	- PATH=$M2:$PATH or PATH=%M2%;%PATH%
+
+POM stands for Project Object Model.
+- resides in the base directory of the project as pom.xml.
+- contains information about the project and various configuration detail used by Maven to build the project(s).
+- also contains the goals and plugins.
+
+While executing a task or goal, Maven looks for the POM in the current directory. It reads the POM, gets the needed configuration information, then executes the goal. Some of the configuration that can be specified in the POM are following:
+
+-project dependencies
+-plugins
+-goals
+-build profiles
+-project version
+-developers
+-mailing list
+
+Before creating a POM file, we should first decide 
+- <groupID> 		- The project group (mandatory)
+- <artifactId>	- The groject group name (mandatory)
+- <version>			- The project group version (mandatory) 
+as these attributes help in uniquely identifying the project in repository.
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>com.companyname.project-group</groupId>
+   <artifactId>project</artifactId>
+   <version>1.0</version>
+ 
+</project>
+
+there should be a single POM file for each project.
+
+All POM files require the project element and three mandatory fields: groupId, artifactId,version.
+
+Projects notation in repository is groupId:artifactId:version
+
+Root element of POM.xml is project and it has three major sub-nodes:
+Node				Description
+groupId			This is an Id of project's group. 
+						This is generally unique amongst an organization or a project. 
+						For example, a banking group com.company.bank has all bank 
+						related projects.
+					
+artifactId	This is an Id of the project.
+						This is generally name of the project. 
+						For example, consumer-banking. 
+						Along with the groupId, the artifactId defines the artifact's 
+						location within the repository.
+						
+version			This is the version of the project.
+						Along with the groupId, It is used within an artifact's repository 
+						to separate versions from each other. 
+						For example: com.company.bank:consumer-banking:1.0
+ 
+com.company.bank:consumer-banking:1.1.
+
+
+Super POM
+All POMs inherit from a parent (despite explicitly defined or not). 
+This base POM is known as the Super POM, and contains values inherited by default.
+
+An easy way to look at the default configurations of the super POM is 
+by running the following command: mvn help:effective-pom
+
+cd D:\Program Files\apache-maven-3.3.9
+mkdir myapp
+cd myapp
+mvn archetype:generate
+- Choose a number or apply filter (use default)
+- Choose org.apache.maven.archetypes:maven-archetype-quickstart version (use default)
+- Define value for property 'groupId' (give a package name, eg com.example.package)
+- Define value for property 'artifactId' (give directory name, eg MavenTestApp)
+- Define value for property 'package' (use default)
+<a lot of stuff will be generated>
+cd MavenTestApp
+mvn compile (command to compile above sample)
+
+http://www.tutorialspoint.com/maven/maven_build_life_cycle.htm
