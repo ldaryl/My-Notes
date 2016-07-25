@@ -101,3 +101,6 @@ cd MavenTestApp
 mvn compile (command to compile above sample)
 
 http://www.tutorialspoint.com/maven/maven_build_life_cycle.htm
+
+
+testing
