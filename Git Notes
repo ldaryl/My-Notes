@@ -1,0 +1,33 @@
+1.	https://github.com/ldaryl
+
+2.	Create a repository called "git-tests" at https://github.com/ldaryl
+
+-------------------------------------------------------------------
+1.	Download Git Client: https://git-scm.com/download/win (I use Portable version)
+
+2.	Install Git Client (Portable version)
+
+3.	Startup the Git Client
+		<Git_Client_Installed_directory>\bin\git-bash.exe
+
+4.	Setup the proxy server for Git Client to access internet
+		$ git config --global http.proxy http://176.175.25.48:8080
+		$ git config -l 	(just takeing a look at the config settings)
+
+
+5.	Create a working directory
+		$ pwd
+		/
+
+		$ mkdir ldaryl		(this is my working directory)
+		$ cd ldaryl
+		$ git clone https://github.com/ldaryl/git-test git-test (let's clone from a github repository (https://github.com/ldaryl/git-test) into '/ldaryl/git-test' directory)
+		$ cd git-test			(cd in the newly created directory)
+		$ git branch 			(just checking)
+		$ git remote -v 	(just checking)
+		$ echo "Hello World" > helloworld.txt (just creating a test file)
+		$ git add . ('stage' all file in current directory. 'stage' means to prepare for 'commit')
+		$ git commit -m "My first commit"		('commit' any 'staged' file)
+		$ git push origin 									('push' remote, ie https://github.com/ldaryl/git-test)
+
+6.	Done - You will see the 'helloworld.txt' in 'https://github.com/ldaryl/git-test'
