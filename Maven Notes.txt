@@ -1,3 +1,4 @@
+lines (81 sloc) 3.74 KB
 http://www.tutorialspoint.com/maven/maven_overview.htm
 
 An example, assuming, ${basedir} denotes the project location,
@@ -99,8 +100,12 @@ mvn archetype:generate
 <a lot of stuff will be generated>
 cd MavenTestApp
 mvn compile (command to compile above sample)
+mvn package (create a jar file)
+java -cp target\MavenTestApp-1.0-SNAPSHOT.jar com.example.maventest.App (run the program in the jar)
 
 http://www.tutorialspoint.com/maven/maven_build_life_cycle.htm
 
 
 testing
+
+com.example.maventest.App
