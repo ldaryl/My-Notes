@@ -87,6 +87,9 @@ This base POM is known as the Super POM, and contains values inherited by defaul
 An easy way to look at the default configurations of the super POM is 
 by running the following command: mvn help:effective-pom
 
+-------------------------------------------------------------------------------
+Hands On - POJO
+-------------------------------------------------------------------------------
 cd D:\Program Files\apache-maven-3.3.9
 mkdir myapp
 cd myapp
@@ -101,7 +104,35 @@ cd MavenTestApp
 mvn compile (command to compile above sample)
 mvn package (create a jar file)
 java -cp target\MavenTestApp-1.0-SNAPSHOT.jar com.example.maventest.App (run the program in the jar)
+mvn clean		(will delete away the target folder)
 
+-------------------------------------------------------------------------------
+Hands On - WebApp
+-------------------------------------------------------------------------------
+cd D:\Program Files\apache-maven-3.3.9\myapp
+(hint: mvn archetype:generate -Dfilter=maven-archetype-webapp)
+mvn archetype:generate
+- Choose a number or apply filter: 820
+- Choose org.apache.maven.archetypes:maven-archetype-webapp version: (use default)
+- Define value for property 'groupId': com.example.webapp		(give a package name, eg com.example.package)
+- Define value for property 'artifactId': mywebapp					(give directory name, eg MavenTestApp)
+- Define value for property 'package': 											(use default)
+
+
+
+
+
+-------------------------------------------------------------------------------
+Maven's Build Lifecycle
+-------------------------------------------------------------------------------
+Maven's Build Lifecycle consists of the following phases executed in order: 
+- validate phase
+- compile phase
+- test phase			(Hint: myApp.class & myAppTest.class, autorun myApopTest.class to test out myApp.class)
+- package phase		(as per defined in pom.xml, eg jar ear...)
+- install phase		(publishes your jar into the local depository for other projects to use)
+- deploy phase		(publishes your jar into the remote depository for others to use)
+(Note: Specify a Build phase & previous phases automatically run)
 
 
 http://www.tutorialspoint.com/maven/maven_build_life_cycle.htm
