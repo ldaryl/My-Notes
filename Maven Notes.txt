@@ -1,4 +1,3 @@
-lines (81 sloc) 3.74 KB
 http://www.tutorialspoint.com/maven/maven_overview.htm
 
 An example, assuming, ${basedir} denotes the project location,
@@ -103,9 +102,26 @@ mvn compile (command to compile above sample)
 mvn package (create a jar file)
 java -cp target\MavenTestApp-1.0-SNAPSHOT.jar com.example.maventest.App (run the program in the jar)
 
+
+
 http://www.tutorialspoint.com/maven/maven_build_life_cycle.htm
 
 
 testing
 
 com.example.maventest.App
+
+-------------------------------------------------------------------------------
+settings.xml file
+-------------------------------------------------------------------------------
+The settings.xml file contains elements used to define values which configure Maven execution.
+It should not be bundled to any specific project or distributed.
+
+It includes values such as the local repository location, alternate remote repository servers, 
+and authentication information.
+
+There are two locations where a settings.xml file may live:
+${maven.home}/conf/settings.xml		(aka global settings)
+${user.home}/.m2/settings.xml			(aka user settings)
+
+If both files exists, their contents gets merged, with the user-specific settings.xml being dominant.
