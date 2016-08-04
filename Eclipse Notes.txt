@@ -1,0 +1,8 @@
+--------------------------------------------------------------------------------
+1. Let Eclipse do the typing
+--------------------------------------------------------------------------------
+Eclipse comes with Code Assist/Code (ctrl+space) completion. 
+
+If you need a getter/setter, type get/set somewhere in your 
+class (outside of a method declaration) and use Content Assist (ctrl+space)to 
+let Eclipse create the method for you.
