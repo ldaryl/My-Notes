@@ -1,0 +1,11 @@
+--------------------------------------------------------------------------------
+1. Enable Directory Listing
+--------------------------------------------------------------------------------
+The DefaultServlet of Tomcat is configured to not show directory listings by default. 
+Open <TOMCAT_HOME>/conf/web.xml file, search the <servlet> entry of the DefaultServlet 
+and then change its listings initialization parameter to
+
+<init-param>
+    <param-name>listings</param-name>
+    <param-value>true</param-value>
+</init-param>
