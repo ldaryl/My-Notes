@@ -9,3 +9,9 @@ and then change its listings initialization parameter to
     <param-name>listings</param-name>
     <param-value>true</param-value>
 </init-param>
+
+--------------------------------------------------------------------------------
+2. Environment Variable Setup 
+--------------------------------------------------------------------------------
+Set CATALINA_HOME in <TOMCAT_HOME>/bin/catalina.sh
+set JAVA_HOME in <TOMCAT_HOME>/bin/setenv.sh
