@@ -12,6 +12,6 @@ let Eclipse create the method for you.
 --------------------------------------------------------------------------------
 Ref: http://www.codejava.net/servers/tomcat/how-to-add-tomcat-server-in-eclipse-ide
 
-Menu > Window > Server > Runtime Environments > Add Button
+Menu > Window > Preference > Server > Runtime Environments > Add Button
 Apache >
 check the option Create a new local server
