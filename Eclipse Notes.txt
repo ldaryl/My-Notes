@@ -6,3 +6,12 @@ Eclipse comes with Code Assist/Code (ctrl+space) completion.
 If you need a getter/setter, type get/set somewhere in your 
 class (outside of a method declaration) and use Content Assist (ctrl+space)to 
 let Eclipse create the method for you.
+
+--------------------------------------------------------------------------------
+2. Add Tomcat server to Eclipse IDE
+--------------------------------------------------------------------------------
+Ref: http://www.codejava.net/servers/tomcat/how-to-add-tomcat-server-in-eclipse-ide
+
+Menu > Window > Server > Runtime Environments > Add Button
+Apache >
+check the option Create a new local server
